@@ -10,7 +10,7 @@ This is my first blog post.
 Here's a code snippet.
 
 
-```
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
