@@ -19,3 +19,9 @@ Let's say you're so good that you have accounted for the scenario above, and int
 
 So all you're left with is a gazillion lousy netflow or firewall alerts saying that Sauron, which we all know is evil, from Mordor, which is notorious for evil activity, has made a successfull inbound connection to your cute web VPN login page with company logo gracefully rising through the horizon over a calm ocean background, and transferred a whopping 1.2MB of data over port 443. Okay. Well. 1.2MB isn't a big deal, right? Or is it? 
 
+## Data
+
+1. Traffic to/from a known bad IP address
+2. Traffic was allowed by firewall (total bytes > 0)
+3. X bytes were transferred
+
