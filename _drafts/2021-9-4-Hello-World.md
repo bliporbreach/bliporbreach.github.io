@@ -8,7 +8,7 @@ So here's the challenge:
 ## The Challenge!
 Let's say you have a public facing service that you can't restrict based on source IP, geo-location, or time. It could be your client's Citrix portal, web VPN, OWA, or some other sort of portal that needs to be exposed to the world in order for your users to be able to log in from anywhere, at any time.
 
-## Oh but I have a NextGen firewall
+## That's okay, I have a NextGen firewall!
 Yes, in an ideal world, your super awesome, deep-packet-inspecting, ssl-decrypting, malware-scanning, application-detecting, omniscient, omnipotent, almighty NextGen firewall would whack the bad guy right in the head and shun them for a whole 30 minutes, but let's face it, things don't just quite work the way your firewall sales person explained it to you now, do they? Licenses expire, certificates expire, IP blacklists get out of sync, some other admin creates an allow:any/any rule, and how on earth would your fancy firewall know John Doe logging in to OWA from North Carolina with a legitimate password is actually cyber criminal in Nigeria pivoting from an already-compromised machine?  
 
 ## But I have MFA!
