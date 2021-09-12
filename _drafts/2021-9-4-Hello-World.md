@@ -25,3 +25,10 @@ So all you're left with is a gazillion lousy netflow or firewall alerts saying t
 2. Traffic was allowed by firewall (total bytes > 0)
 3. X bytes were transferred
 
+
+
+| Application      | Google Query | Avg. Bytes | Max. Bytes | 
+| ----------- | ----------- | ------------- | -------- |
+| Citrix Logon Page Load      | "Citrix Receiver" inurl:index.html "Gateway" |  1.36 MB | 1.6 MB |
+
+
