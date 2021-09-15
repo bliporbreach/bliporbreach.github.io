@@ -13,3 +13,7 @@ You sit back, pour yourself a nice single malt scotch, and admire the view on yo
 
 ... and that lasts a couple of hours. Ok, a few days. Weeks maybe? Then comes the real question: **this is cute and all, but how is any of this making me more secure?**
 
+Enter MITRE ATT&CK!
+
+## MITRE WHAT? ##
+There are plenty of articles about MITRE ATT&CK, and their websites does a really good job of describing what it is. A grossly oversimplified way that I describe it to my clients is "MITRE ATT&CK is like the perodic table of all the bad things that bad people can do to your data and systems". *Side note - good people are also capatable of doing very bad things but let's not go there right now.*  
