@@ -16,4 +16,6 @@ You sit back, pour yourself a nice single malt scotch, and admire the view on yo
 Enter MITRE ATT&CK!
 
 ## MITRE WHAT? ##
-There are plenty of articles about MITRE ATT&CK, and their websites does a really good job of describing what it is. A grossly oversimplified way that I describe it to my clients is "MITRE ATT&CK is like the perodic table of all the bad things that bad people can do to your data and systems". *Side note - good people are also capatable of doing very bad things but let's not go there right now.*  
+There are plenty of articles about MITRE ATT&CK, and their websites does a really good job of describing what it is. A grossly oversimplified way that I describe it to my clients is "MITRE ATT&CK is like the perodic table of all the bad things that bad people can do to your data and systems". *Side note - good people are also capatable of doing very bad things but let's not open that can of worms right now.*  
+
+So let's say you work at a 
