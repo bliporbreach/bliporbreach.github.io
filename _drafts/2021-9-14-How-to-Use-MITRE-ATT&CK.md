@@ -11,7 +11,5 @@ Congratulations! You've done it! You have the data, you have THE POWER!
 
 You sit back, pour yourself a nice single malt scotch, and admire the view on your screen, riding the waves of those smooth line graphs, staring at those dazzling pastel colored pie charts, ... life. is. beauitful!
 
-
-... and that lasts a couple of hours. Ok, maybe a few days. Then comes the real question: how is any of this making me more secure?
-
+... and that lasts a couple of hours. Ok, a few days. Weeks maybe? Then comes the real question: **this is cute and all, but how is any of this making me more secure?**
 
