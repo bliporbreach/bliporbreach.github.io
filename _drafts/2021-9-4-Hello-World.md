@@ -32,3 +32,21 @@ So all you're left with is a gazillion lousy netflow or firewall alerts saying t
 | Citrix Logon Page Load      | "Citrix Receiver" inurl:index.html "Gateway" |  1.36 MB | 1.6 MB |
 
 
+
+
+
+|               | EPP   | EDR     | NDR     | XDR         | SIEM     | SOAR |
+| ------------- | ---   | ------- | ---     | ---         | ----     | ---- |
+| Workstations  | MD    | MD, PM  |         |  MD, PM, LC | LC, LR   |      |
+| Servers       | MD    | MD, PM  |         |  MD, PM, LC | LC, LR   |      |
+| Network Nodes |       |         | TA, LC  |  TA, LC     | LC, LR   |      |
+| Applications  |       |         |         |  LC         | LC, LR   |      |
+| Cloud         |       |         |         |  LC         | LC, LR   |      |
+| SIEM          |       |         |         |             |          | AR   |
+
+MD: Malware Detection
+PM: Process Monitoring
+TA: Traffic Analysis
+LC: Log Collection
+LR: Log Retention
+AR: Automation and Remediation
