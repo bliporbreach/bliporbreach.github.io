@@ -1,3 +1,8 @@
+---
+layout: post
+title: Test
+---
+
 
 |               | EPP                 | EDR                    | NDR            | XDR          | SIEM             | SOAR |
 | ---           | ---                 | ---                    | ---            | ---          | ---              | ---  |
