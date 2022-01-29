@@ -35,18 +35,47 @@ So all you're left with is a gazillion lousy netflow or firewall alerts saying t
 
 
 
-|               | EPP   | EDR     | NDR     | XDR         | SIEM     | SOAR |
-| ------------- | ---   | ------- | ---     | ---         | ----     | ---- |
-| Workstations  | MD    | MD, PM  |         |  MD, PM, LC | LC, LR   |      |
-| Servers       | MD    | MD, PM  |         |  MD, PM, LC | LC, LR   |      |
-| Network Nodes |       |         | TA, LC  |  TA, LC     | LC, LR   |      |
-| Applications  |       |         |         |  LC         | LC, LR   |      |
-| Cloud         |       |         |         |  LC         | LC, LR   |      |
-| SIEM          |       |         |         |             |          | AR   |
+|               | EPP                 | EDR                    | NDR            | XDR          | SIEM             | SOAR |
+| ---           | ---                 | ---                    | ---            | ---          | ---              | ---  |
+| Workstations  | **AM**, *DC*, *HFW* | **HIDS**, **PM**, *AM* |                | *PM*, *LC*   | *LC*, *LR*       |      |
+| Servers       | **AM**, *HFW*       | **HIDS**, **PM**, *AM* |                | **PM**, *LC* | **LC**, **LR**   |      |
+| Network Nodes |                     |                        | **NIDS**, *LC* |  HIPS, LC     | LC, LR   |      |
+| Applications  |             |          |          |  LC         | LC, LR   |      |
+| Cloud         |             |          |          |  LC         | LC, LR   |      |
+| SIEM          |             |          |          |             |          | AR   |
 
-MD: Malware Detection
+
+
+
+|               | EPP                 | EDR                    | NDR             | XDR                   | SIEM                 | SOAR |
+| ---           | ---                 | ---                    | ---             | ---                   | ---                  | ---  |
+| Endpoints     | **Antimalware*      | *Antimalware*          |                 |                       |                      |      |
+|               | *Device Control*    | *Device Control*       |                 |                       |                      |      |
+|               | *Host Firewall*     |                        |                 |                       |                      |      | 
+|               |                     | **Host IDS**           |                 | *Host IDS*            | *Host IDS*           |      |
+|               |                     | **Process Monitoring** |                 | **Process Monitoring* | *Process Monitoring* |      |
+|               |                     |                        |                 | *Log Collection*      | **Log Collection**   |      |
+|               |                     |                        |                 |                       | **Log Retention**    |      |
+| Network Nodes |                     |                        | **Network IDS** | **Network IDS**       | *Network IDS*        |      |
+|               |                     |                        |                 | *Log Collection*      | **Log Collection**   |      |
+|               |                     |                        |                 |                       | **Log Retention**    |      |
+| Applications  |                     |                        |                 | *Log Collection*      | **Log Collection**   |      |
+|               |                     |                        |                 |                       | **Log Retention**    |      |
+| Cloud         |                     |                        |                 | *Log Collection*      | **Log Collection**   |      |
+|               |                     |                        |                 |                       | **Log Retention**    |      |
+| SIEM          |                     |                        |                 |                       | **Automation**       |      |
+|               |                     |                        |                 |                       | **Orchestration**    |      |
+
+
+
+
+AM: Anti-malware
+DC: Device Control
 PM: Process Monitoring
-TA: Traffic Analysis
+HFW: Host Firewall
+HIDS: Host Intrusion Detection System
+NIDS: Network Intrusion Detection System
+PM: Process Monitoring
 LC: Log Collection
 LR: Log Retention
 AR: Automation and Remediation
