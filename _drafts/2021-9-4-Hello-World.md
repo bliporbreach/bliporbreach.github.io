@@ -3,8 +3,7 @@ layout: post
 title: EPP, EDR, XDR, SIEM, UBA, CIA, NSA, WTF?
 ---
 
-Full disclosure: I have built and currently manage a multi-tenant SIEM platform implemented across hundreds of small to mid-size organizations, so I can't claim to be fully unbiased on this subject. That being said, I started writing this article under the impression that XDR is essentially SIEM on steroids, and I was hoping to find justification to support that hypothesis. I created tables, drew venn diagrams highlighting the commonalities and differences between the two product types. But the more I read, and the more I drew, the clearer it became that other than some negligable differences, the two categories are essentially the same, with the latter being more limited in scope, and a clever marketing response to EDR technology, rather than a new category of technical security control.
-
+> Disclosure: I have built and currently manage a multi-tenant SIEM platform implemented across hundreds of small to mid-size organizations, so I can't claim to be fully unbiased on this subject. 
 
 Here's how the conversation usually goes for me.
 
