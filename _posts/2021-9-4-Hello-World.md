@@ -11,7 +11,17 @@ So this is how this coversation usually goes.
 - Ingests things like logs, process info, and some flow data, then puts them all together is some nice dashboards and runs threat detection rules against them. It's actually more like a combination of EDR, NTA, sometimes UEBA, maybe EPP, maybe not, also SEG logs...
 - But then how is that different from a SIEM?
 
-How indeed? To answer that question, let's go back in time and review how each of these acronyms came to be.
+How indeed? To answer that question, let's go back in time and review how each of these acronyms was born.
+
+I'm going to spare you the history of computer virus going all the way back to the 70's; you can find a great overview of that on [this](https://en.wikipedia.org/wiki/Computer_virus) wikipedia page. Let's fast forward to the 80's when the first **Antivirus** programs were created. These were your good old Dr. Solomon's Antivirus Toolkit, Norton Antivirus, McAfee, and so on. Their main job was to scan your hard drive for known-bad pieces of malware, mainly by comparing file hashes to a local database of definitions, looking for certain strings in file data, and some heuristic analyasis.
+
+As time went by, a lot of these Antivirus solutions started adding some additional features, namely Host Firewall, Device Control, and Web Traffic Filtering. Subsequently, the name changed from Antivirus or **Endpoint Protection**, abbreviated to EPP. These were your Symantec Endpoint Protection, ESET, WebRoot, etc. Further down the road, companies like Cylance came up with some great static analysis and machine learning solutions, propelling the industry toward **NextGen** Endpoint Protection. Most legacy EPP vendors followed suite and added ML functionalities of their own.
+
+Then came **CarbonBlack** with the valid claim that many malware-less attacks can go right past your NextGen EPP solution if you're not looking at process-related suspicious activity. Examples of these are Living Off the Land techniques such as using Powershell scripts, strange process trees (WinWord.exe spawning cmd.exe), processes running from the Recycle Bin, and so on. This was the birth of **Endpoint Detection and Response**, or EDR technology. The core idea here is that there is a grey area where categorically blocking the activity could wreak havoc on you systems, and you'll end up with very unhappy developers and sysadmins. EDR's main goal was to detect the suspicious activity and report it to your IT team or dedicated SOC for further investigation.
+
+Over the next few years, the lines between EPP and EDR began to get blurry. EDR makers such as CarbonBlack and CrowdStrike started adding more EPP features such as static analysis, signature scans, device control, and firewall management, while EPP vendors such as Symantec and Cylance started to build more EDR-like toolset into their products.
+
+
 
 
 |               | EPP                 | EDR                    | NDR            | XDR          | SIEM             | SOAR |
