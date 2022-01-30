@@ -3,13 +3,13 @@ layout: post
 title: EPP, EDR, XDR, SIEM, UBA, CIA, NSA, WTF?
 ---
 
-> Disclosure: I have built and currently manage a multi-tenant SIEM platform implemented across hundreds of small to mid-size organizations, so I can't claim to be fully unbiased on this subject. 
+> Full Disclosure: I have built and currently manage a multi-tenant SIEM platform across hundreds of small to mid-size organizations, so I can't claim to be fully unbiased on this subject. 
 
-Here's how the conversation usually goes for me.
+I was having a conversation with a coworker the other day and this is how it went.
 
 - So what is an XDR?
-- It's like an EDR but it also monitors your network grear and cloud platforms.
-- Monitor how?
+- It's like an EDR but it also monitors your network gear and cloud platforms.
+- So it's kind of like a SIEM.
 - Ingests things like logs, process info, and some flow data, then puts them all together is some nice dashboards and runs threat detection rules against them. It's actually more like a combination of EDR, NTA, sometimes UEBA, maybe EPP, maybe not, also SEG logs...
 - But then how is that different from a SIEM?
 
