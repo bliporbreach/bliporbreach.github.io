@@ -33,9 +33,15 @@ First generation SIEM solutions were more focused towards log retention for comp
 Some organizations further automate their incident reponse by integrating their SIEM into a **SOAR (Security Orchestration, Automation, and Response)** tool. These tools either simplify or automate certain aspects of SOC response, such as using SIEM alerts to blacklist an attacker's IP address on the perimeter firewall, create a DNS sinkhole, or isolate an endpoint.
 
 ## So what's XDR?
+The term **eXtended Detection and Response (XDR)** was coined by Nir Zuk of Palo Alto Networks in a keynote speech back in 2018. 
 
+Let's start with Gartner's definiton.
 
+> “a SaaS-based, vendor-specific, security threat detection and incident response tool that natively integrates multiple security products into a cohesive security operations system that unifies all licensed components.”
 
+Sounds familiar? If you remove "SaaS-based" and "vendor-specific" from the description above, the rest of that statement describes a subset of what any SIEM tool already provides out of the box. Granted, some (not all) SIEM solutions are not SaaS-based, and SIEM is generally vendor-agnostic, but does any of that really warrant coming up with yet another acronym and further complicating matters for engineers and business professionals alike?
+
+I keep finding articles claiming that SIEM is more of a compliance-tool, better suited for longer log retention, where as XDR is a more advanced approach to detection and response, more aligned with security use cases. But as I explained above, modern SIEM tools utilize a slew of different detection methods (static rules, thresholds, and ML jobs)...
 
 
 
