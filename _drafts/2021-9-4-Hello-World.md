@@ -74,6 +74,6 @@ LC: Log Collection<br>
 LR: Log Retention<br>
 
 
-[1] https://en.wikipedia.org/wiki/Computer_virus, 'Computer Virus'
-[2] https://cs.stanford.edu/people/eroberts/cs181/projects/2000-01/viruses/anti-virus.html, 'How Anti-Virus Software Works'
-[3] https://www.gartner.com/imagesrv/media-products/pdf/symantec/symantec-1-4SNI36O.pdf?es_p=6816496, 'The Evolution of Endpoint Protection'
+[1] https://en.wikipedia.org/wiki/Computer_virus, 'Computer Virus'<br>
+[2] https://cs.stanford.edu/people/eroberts/cs181/projects/2000-01/viruses/anti-virus.html, 'How Anti-Virus Software Works'<br>
+[3] https://www.gartner.com/imagesrv/media-products/pdf/symantec/symantec-1-4SNI36O.pdf?es_p=6816496, 'The Evolution of Endpoint Protection'<br>
