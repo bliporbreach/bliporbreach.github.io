@@ -3,9 +3,11 @@ layout: post
 title: EPP, EDR, XDR, SIEM, UBA, CIA, NSA, WTF?
 ---
 
-> Full Disclosure: I have built and currently manage a multi-tenant SIEM platform across hundreds of small to mid-size organizations, so I can't claim to be fully unbiased on this subject. 
+> Disclosure of potential bias
+> 
+> While I have made the effort to provide an unbiased account on this subject, the reader must be aware that I have built and currently manage a large SIEM deployment across more than 100 organizations.
 
-I was having a conversation with a coworker the other day and this is how it went.
+In my line of work, I am often asked by coworkers and clients about the meaning of the ever-expanding and confusing list of security tool acrnoyms (EPP, EDR, NTA, HIPS, HIDS, UBA, UEBA, SIEM, etc.)
 
 - So what is an XDR?
 - It's like an EDR but it also monitors your network gear and cloud platforms.
