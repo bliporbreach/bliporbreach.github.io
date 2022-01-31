@@ -57,12 +57,12 @@ I keep finding articles claiming that SIEM is more of a compliance-tool, better 
 
 
 
-|               | EPP                 | EDR                    | NDR            | XDR                    | SIEM                         |
-| ---           | ---                 | ---                    | ---            | ---                    | ---                          |
-| Endpoints     | **AM**, *DC*, *HFW* | **HIDS**, **PM**, *AM* |                | **AM**,**HIDS**,**PM** | **LC**, **LR**, *HIDS*, *PM* |
-| Network Nodes |                     |                        | **NIDS**, *LC* | **NIDS**, *LC*         | **LC**, **LR**, **NIDS**     |
-| Applications  |                     |                        |                | *LC*                   | **LC**, **LR**               |
-| Cloud         |                     |                        |                | *LC*                   | **LC**, **LR**               |
+|               | EPP                 | EDR                    | NDR            | XDR                      | SIEM                         |
+| ---           | ---                 | ---                    | ---            | ---                      | ---                          |
+| Endpoints     | **AM**, *DC*, *HFW* | **HIDS**, **PM**, *AM* |                | **AM**, **HIDS**, **PM** | **LC**, **LR**, *HIDS*, *PM* |
+| Network Nodes |                     |                        | **NIDS**, *LC* | **NIDS**, *LC*           | **LC**, **LR**, **NIDS**     |
+| Applications  |                     |                        |                | *LC*                     | **LC**, **LR**               |
+| Cloud         |                     |                        |                | *LC*                     | **LC**, **LR**               |
 
 AM: Anti-Malware<br>
 PM: Process Monitoring<br>
