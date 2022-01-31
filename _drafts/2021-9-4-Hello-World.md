@@ -7,23 +7,9 @@ title: XDR
 > 
 > While I have made an effort to provide an unbiased account on this subject, the reader must be aware that I have built and currently manage a large SIEM deployment across more than 100 organizations [TBD]
 
-In my line of work, every once in a while I am approached by a coworker or a client with questions about the ever-expanding list of security tool acrnoyms (EPP, EDR, NTA, HIPS, HIDS, UBA, UEBA, SIEM, XDR, etc.), what they mean, and how they differ from one another. Lately, some of the most common questions have been around the differences between SIEM and XDR. Here's how the conversation usually goes:
+In my line of work, every once in a while I am approached by a coworker or a client with questions about the ever-expanding list of security tool acrnoyms (EPP, EDR, NTA, HIPS, HIDS, UBA, UEBA, SIEM, XDR, SASE, etc.), what they mean, and how they differ from one another. Generally, I have had no trouble explaining what each one of these tools are, talking about the evolution and convergence of EPP and EDR tools, where SIEM and MDR fit in, or the emergence of SASE solutions that are likely to replace permieter firewalls. But when it gets to XDR, things get a bit weird. Is it really a big enough technology worthy of having its own category? Or is it where SIEM technology has been going for over two-decades? Is it just a combination alerts from different log sources auto-magically correlating and bundling themselves into incidents? Or is it a team of human operators doing all that work like MDR? Is it really the next best *thing* or just a smart marketing move from some vendors trying to take business away from EDR companies?
 
-Alice - So what is an XDR?<br>
-Bob - It's like an EDR but it also monitors your network gear and cloud platforms.<br>
-Alice - So it's kind of like a SIEM?<br>
-Bob - Kind of... but SIEM doesn't really focus on endpoints, it doesn't care about running processes or suspicious behavior, it just ingests logs. <br>
-Alice - Depends on the SIEM though, endpoint agents by Splunk, Elastic, AlienVault ingest event logs, syslog, process info, network traffic, and file integrity data, either using built-in modules or by leveraging things like Sysmon, Auditd, osquery, etc.<br>
-Bob - True, but they don't have the endpoint protection (EPP) component, so it's all detection only. With XDR, it's detection AND prevention.<br>
-Alice - Yeah but I've heard SIEM vendors are ramping up on that area too, Elastic Agents have EPP components for examples... so it's just a matter of time...<br>
-Bob - Yeah, but also SIEM is better suited for compliance, not detection and response; whereas XDR is better at detecting suspcious activity using ML rules...<br>
-Alice - That's really not the case anymore though, most modern SIEM tools have an extensive library of static detection rules and ML jobs these days.<br>
-Bob - But they're mostly on-prem, XDR is a SaaS service.<br>
-Alice - AlienVault is SaaS, then there's Splunk Cloud and Elastic Cloud, QRadar has a cloud offering too.<br>
-Bob - ...<br>
-Alice - So what really is the difference between SIEM and XDR?
-
-To answer that question, we need to do quick review of the evolution of protection, detection, and response tools across endpoints, network nodes, and the cloud. I have tried to cite references as much as possible but the information outlined below is mainly based on my own experience and obervations in this field for the last 20 years. 
+To answer these question, we need to do quick review of the evolution of protection, detection, and response tools across endpoints, network nodes, and the cloud. I have tried to cite references as much as possible but the information outlined below is mainly based on my own experience and obervations in this field for the last 20 years. 
 
 ## Endpoint Security: From Antivirus to EPP and EDR
 I'm going to spare you the history of computer virus going all the way back to the 70's; you can find a great overview of that on [this](https://en.wikipedia.org/wiki/Computer_virus) wikipedia page [1]. Let's fast forward to the 80's when the first **Antivirus** programs were created. These were your good old Dr. Solomon's Antivirus Toolkit, Norton Antivirus, McAfee, and so on. Their main job was to scan your hard drive for malware, mainly by comparing files againsta local database of known-bad hashes or looking for certain strings in file data. Later on, many vendors added some heuristic analyasis to identify suspicious activity similar to what you can get with EDR tools these days [2].
@@ -45,6 +31,23 @@ First generation SIEM solutions were more focused towards log retention for comp
 Some organizations further automate their incident reponse by integrating their SIEM into a **SOAR (Security Orchestration, Automation, and Response)** tool. These tools either simplify or automate certain aspects of SOC response, such as using SIEM alerts to blacklist an attacker's IP address on the perimeter firewall, create a DNS sinkhole, or isolate an endpoint.
 
 ## So what's XDR?
+
+Here's how the conversation usually goes:
+
+Alice - So what is an XDR?<br>
+Bob - It's like an EDR but it also monitors your network gear and cloud platforms.<br>
+Alice - So it's kind of like a SIEM?<br>
+Bob - Kind of... but SIEM doesn't really focus on endpoints, it doesn't care about running processes or suspicious behavior, it just ingests logs. <br>
+Alice - Depends on the SIEM though, endpoint agents by Splunk, Elastic, AlienVault ingest event logs, syslog, process info, network traffic, and file integrity data, either using built-in modules or by leveraging things like Sysmon, Auditd, osquery, etc.<br>
+Bob - True, but they don't have the endpoint protection (EPP) component, so it's all detection only. With XDR, it's detection AND prevention.<br>
+Alice - Yeah but I've heard SIEM vendors are ramping up on that area too, Elastic Agents have EPP components for examples... so it's just a matter of time...<br>
+Bob - Yeah, but also SIEM is better suited for compliance, not detection and response; whereas XDR is better at detecting suspcious activity using ML rules...<br>
+Alice - That's really not the case anymore though, most modern SIEM tools have an extensive library of static detection rules and ML jobs these days.<br>
+Bob - But they're mostly on-prem, XDR is a SaaS service.<br>
+Alice - AlienVault is SaaS, then there's Splunk Cloud and Elastic Cloud, QRadar has a cloud offering too.<br>
+Bob - ...<br>
+Alice - So what really is the difference between SIEM and XDR?
+
 The term **eXtended Detection and Response (XDR)** was coined by Nir Zuk of Palo Alto Networks in a keynote speech back in 2018. 
 
 Let's start with Gartner's definiton.
