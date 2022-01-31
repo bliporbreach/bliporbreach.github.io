@@ -23,10 +23,10 @@ Alice - AlienVault is SaaS, then there's Splunk Cloud and Elastic Cloud, QRadar 
 Bob - ...<br>
 Alice - So what really is the difference between SIEM and XDR?
 
-To answer that question, we need to do quick review of the evolution of protection, detection, and response tools across endpoints, network nodes, and the cloud.
+To answer that question, we need to do quick review of the evolution of protection, detection, and response tools across endpoints, network nodes, and the cloud. I have tried to cite references as much as possible but the information outlined below is mainly based on my own experience and obervations in this field for the last 20 years. 
 
 ## Endpoint Security: From Antivirus to EPP and EDR
-I'm going to spare you the history of computer virus going all the way back to the 70's; you can find a great overview of that on [this](https://en.wikipedia.org/wiki/Computer_virus) wikipedia page. Let's fast forward to the 80's when the first **Antivirus** programs were created. These were your good old Dr. Solomon's Antivirus Toolkit, Norton Antivirus, McAfee, and so on. Their main job was to scan your hard drive for malware, mainly by comparing files againsta local database of known-bad hashes or looking for certain strings in file data. Later on, many vendors added some heuristic analyasis to identify suspicious activity similar to what you can get with EDR tools these days.
+I'm going to spare you the history of computer virus going all the way back to the 70's; you can find a great overview of that on [this](https://en.wikipedia.org/wiki/Computer_virus) wikipedia page. Let's fast forward to the 80's when the first **Antivirus** programs were created. These were your good old Dr. Solomon's Antivirus Toolkit, Norton Antivirus, McAfee, and so on. Their main job was to scan your hard drive for malware, mainly by comparing files againsta local database of known-bad hashes or looking for certain strings in file data [2][2]. Later on, many vendors added some heuristic analyasis to identify suspicious activity similar to what you can get with EDR tools these days.
 
 As time went by, a lot of these Antivirus solutions started adding some additional features, namely Host Firewall, Device Control, and Web Traffic Filtering. Subsequently, the name changed from Antivirus or **Endpoint Protection (EPP)**. These were your Symantec Endpoint Protection, ESET, WebRoot, etc. Further down the road, companies like Cylance came up with some great static analysis and machine learning solutions, propelling the industry toward **NextGen** Endpoint Protection. Most legacy EPP vendors quickly followed suit and added ML functionalities of their own.
 
@@ -65,3 +65,6 @@ I keep finding articles claiming that SIEM is more of a compliance-tool, better 
 | Applications  |                     |                        |                |  LC         | LC, LR   |      |
 | Cloud         |                     |          |          |  LC         | LC, LR   |      |
 | SIEM          |                     |          |          |             |          | AR   |
+
+
+[2]:https://cs.stanford.edu/people/eroberts/cs181/projects/2000-01/viruses/anti-virus.html
