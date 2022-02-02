@@ -77,10 +77,15 @@ NIDS: Network Intrustion Detection System<br>
 LC: Log Collection<br>
 LR: Log Retention<br>
 
-It's quite clear that SIEM and XDR have a great amount of overlap. Does that make XDR and SIEM the same? No, at least not yet. Even though the two categories are very similar, XDR is still closer to the endpoint since it has its roots in EPP and EDR technology. If you look at the brochures and marketing information of XDR products, almost all of them have a mature antivirus/EDR component with integrations with a handful of infrastructure and cloud platforms. That's nothing compared to th plethors of integration modules offered by the likes of Splunk, Qradar, and Elastic. But can you really blame them for having a dream? No. Can you blame them for coming up with a new name instead of SIEM, which has sadly become equivant with "complex", and "costly"? No. But do you think a company an EPP company can build a parser like Logstash and a platform that can scale to thousands of nodes, terabytes of data, and be able to run a search for an IOC in your IIS logs going back a year and tell you if a webshell was dropped into yor Exc?
+It's quite clear that SIEM and XDR have a great amount of overlap. Does that make XDR and SIEM the same? No, at least not yet. Even though the two categories are very similar, XDR is still closer to the endpoint since it has its roots in EPP and EDR technology. If you look at the brochures and marketing information of XDR products, almost all of them have a mature antivirus/EDR component with integrations with a handful of infrastructure and cloud platforms. That's nothing compared to th plethors of integration modules offered by the likes of Splunk, Qradar, and Elastic. But can you really blame them for having a dream? Or can you blame them for coming up with a new name that is sexier than SIEM, a term that has sadly become equivant to "complex", and "costly"? I wouldn't. But do you think a company an EPP company can build a parser like Logstash and a platform that can scale to thousands of nodes, terabytes of data, and be able to run a search for an IOC in your Apache logs going back a year and tell you if you were ever hit by a zeroday webshell attack that's been just discovered? Or can it parse your multiline custom application log that's not JSON or CSV or CEF, and uses a weird timestamp? I doubt it.
+
+This is also true for the SIEM vendors; they have also been trying to push into the Endpoint market. A prime example of this is Elastic. They started with detect-only Beats for things like logs, processes, and network connections, but have recently entered the endpoint protection market by acquiring EndGame to release Elastic Agent. But would a SIEM vendor be able to detect a hypervisor rootkit or something that has injected itself into your MBR or UEFI partition? Maybe, who knows!
 
 
-I believe XDR is the natural next step by EPP, EDR, and NDR vendors  
+
+
+
+
 
 
 [1] https://en.wikipedia.org/wiki/Computer_virus, 'Computer Virus'<br>
