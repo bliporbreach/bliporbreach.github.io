@@ -81,6 +81,7 @@ It's quite clear that SIEM and XDR have a great amount of overlap. Does that mak
 
 This is also true for the SIEM vendors; they have also been trying to push into the Endpoint market. A prime example of this is Elastic. They started with detect-only Beats for things like logs, processes, and network connections, but have recently entered the endpoint protection market by acquiring EndGame to release Elastic Agent. But would a SIEM vendor be able to detect a hypervisor rootkit or something that has injected itself into your MBR or UEFI partition? Maybe, who knows!
 
+![SIEM vs. XDR](../images/siem_vs_xdr.jpg)
 
 
 
