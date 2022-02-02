@@ -32,17 +32,17 @@ Some organizations further automate their incident reponse by integrating their 
 
 ## So what's XDR?
 
-The term **eXtended Detection and Response (XDR)** is very new. It was coined by Nir Zuk of Palo Alto Networks in a keynote speech back in 2018. The easiest way for me to explain this is by describing a hypthetical dialogue between our favorite security experts, Bob and Alice. 
+The term **eXtended Detection and Response (XDR)** is relatively new. It was coined by Nir Zuk of Palo Alto Networks in a keynote speech back in 2018 [8]. The easiest way for me to explain this is by describing a hypthetical dialogue between our favorite security experts, Bob and Alice. 
 
 Alice - So what is an XDR?<br>
 Bob - It's like an EDR but it also monitors your network gear and cloud platforms.<br>
 Alice - So it's kind of like a SIEM?<br>
-Bob - Kind of... but SIEM doesn't really focus on endpoints, it doesn't care about running processes or suspicious behavior, it just ingests logs.<br>
-Alice - Depends on the SIEM though... For example Splunk, Elastic, and AlienVault have endpoint agents that ingest event logs, syslog, process info, network traffic, and file integrity data, either using built-in modules or by leveraging things like Sysmon, Auditd, osquery, etc.<br>
+Bob - Kind of... but SIEM doesn't really focus on endpoints, it doesn't care about running processes or suspicious behavior, it just ingests event logs, syslog, etc.<br>
+Alice - Depends on the SIEM though... These days most of the modern ones like Splunk, Elastic, and AlienVault have endpoint agent that ingest event logs, syslog, process info, network traffic, and file integrity data, either using built-in modules or by leveraging things like Sysmon, Auditd, osquery, etc.<br>
 Bob - True, but they don't have the endpoint protection (EPP) component, so it's all detection only. With XDR, it's detection AND prevention.<br>
-Alice - Yeah but I've heard SIEM vendors are ramping up on that area too... so it's just a matter of time...<br>
-Bob - Yeah, but also SIEM is better suited for compliance, not detection and response; whereas XDR is better at detecting suspcious activity using ML rules...<br>
-Alice - That's really not the case anymore though, most modern SIEM tools have an extensive library of static detection rules and ML jobs these days.<br>
+Alice - Yeah but SIEM products have evolved in that area too... so it's just a matter of time...<br>
+Bob - True, but also SIEM is better suited for compliance, not detection and response; whereas XDR is better at detecting suspcious activity using ML rules...<br>
+Alice - That's really not the case anymore. Most modern SIEM tools have an extensive library of static detection rules and ML jobs these days.<br>
 Bob - But they're mostly on-prem, XDR is a SaaS service.<br>
 Alice - AlienVault is SaaS, then there's Splunk Cloud and Elastic Cloud, QRadar has a cloud offering too.<br>
 Bob - ...<br>
@@ -52,9 +52,9 @@ Let's start with Gartner's definiton for XDR.
 
 > “a SaaS-based, vendor-specific, security threat detection and incident response tool that natively integrates multiple security products into a cohesive security operations system that unifies all licensed components.”
 
-Sounds familiar? If you remove "vendor-specific" from the description above, the rest of that statement describes a subset of what any SIEM tool already provides out of the box. Does any of that really warrant coming up with yet another acronym and further complicating matters for engineers and business professionals alike? 
+Sounds familiar? If you remove "vendor-specific" and "licensed" from the description above, the rest of that statement describes a subset of what any SIEM tool already provides out of the box. Does any of that really warrant coming up with yet another acronym and further complicating matters for engineers and business professionals alike? 
 
-To further clarify things for myself, I started breaking down the main components of each of each toolset in order to see how much overlap we're dealing with. I have used a bold typeface for core components, and italic for the additional features I've seen across different products.
+To further clarify things for myself, I started breaking down the main components of each of each toolset in order to see how much overlap we're dealing with. I have used a bold font for core components, and italic for the additional features I've seen across different products.
 
 
 |               | EPP                 | EDR                    | NDR            | XDR                      | SIEM                         |
@@ -73,13 +73,15 @@ NIDS: Network Intrustion Detection System<br>
 LC: Log Collection<br>
 LR: Log Retention<br>
 
-It's quite clear that SIEM and XDR have a great amount of overlap. Does that make XDR and SIEM the same? No, at least not yet. Even though the two categories are very similar, XDR is still closer to the endpoint since it has its roots in EPP and EDR technology. If you look at the brochures and marketing information of XDR products, almost all of them have a mature antivirus/EDR component, but integrate with only a handful of infrastructure and cloud platforms. That's nothing compared to th plethora of integration modules offered by the likes of Splunk, Qradar, and Elastic. That being said, can you really blame them for having a dream? Or can you blame them for coming up with a new name that is sexier than SIEM, a term that has sadly become equivant to "complex" and "costly"? I wouldn't. But do you think a company an EPP company can build a parser like Logstash and a platform that can scale to thousands of nodes, terabytes of data, and be able to run a search for an IOC in your Apache logs going back a year and tell you if you were ever hit by a zeroday webshell attack that's been just discovered? Or can it parse your multiline custom application log that's not JSON or CSV or CEF, and uses a weird timestamp? I doubt it.
+A quick glance at the table above shows that SIEM and XDR do in fact have a great amount of overlap. Does that make XDR and SIEM the same? No, at least not yet. Even though the two categories are very similar, XDR is still closer to the endpoint since it has its roots in EPP and EDR technology. If you look at the brochures and marketing information of XDR products, almost all of them have a mature antivirus/EDR component, but integrate with only a handful of infrastructure and cloud platforms. That's nothing compared to the plethora of integration modules offered by the likes of Splunk, Qradar, and Elastic. 
 
-This is also true for the SIEM vendors; they have also been trying to push into the Endpoint market. A prime example of this is Elastic. They started with detect-only Beats for things like logs, processes, and network connections, but have recently entered the endpoint protection market by acquiring EndGame to release Elastic Agent. But would a SIEM vendor be able to detect a hypervisor rootkit or something that has injected itself into your MBR or UEFI partition? Maybe, who knows!
+That being said, can you really blame EDR vendors for having a dream? Can you blame them for coming up with a new name that is sexier than SIEM, a term that has sadly become synonymous to "complex" and "costly"? Probably not. But do you think a company an EPP company can build a parser like Logstash and a platform that can scale to thousands of nodes, store terabytes of data, and be able to run a search for an IOC in your Apache logs going back a year and tell you if you were ever hit by a zeroday webshell attack that's been just discovered? Or can it parse your multiline custom application log that's not JSON or CSV or CEF, and uses a weird timestamp? I doubt it.
+
+SIEM vendors have been busy too! They have also been trying to push into the Endpoint market. A prime example of this is Elastic. They started with detect-only Beats for things like logs, processes, and network connections, but have recently entered the endpoint protection market by acquiring EndGame to release Elastic Agent [9]. But would a SIEM vendor be able to detect a hypervisor rootkit or something that has injected itself into your MBR or UEFI partition? Maybe, who knows!
 
 ![SIEM vs. XDR](../images/siem_vs_xdr.jpg)
 
-
+For me, the takeaway from this research was that the question whether XDR is a marketing play or a unique category in cybersecurity toolset is irrelevant at this point. It is being quickly adopted by the industry as the new sexy thing, regardless of all the overlaps with SIEM technology. I have even seen it being used by SIEM vendors recently in their marketing material. So the term XDR is here to stay, and it could possibly replace SIEM in the future. What remains to be seen is whether the vendors can deliver on their promise of painless integration, low noise, better correlation, and more accurate ML jobs.
 
 
 
@@ -90,5 +92,7 @@ This is also true for the SIEM vendors; they have also been trying to push into 
 [3] https://arstechnica.com/information-technology/2017/04/the-mystery-of-the-malware-that-wasnt/ 'Lawyers, malware, and money: The antivirus market’s nasty fight over Cylance'<br>
 [4] https://www.gartner.com/imagesrv/media-products/pdf/symantec/symantec-1-4SNI36O.pdf?es_p=6816496, 'The Evolution of Endpoint Protection'<br>
 [5] https://www.garlandtechnology.com/blog/stop-misusing-span-ports-or-risk-losing-network-traffic-data, 'Stop Misusing SPAN Ports Or Risk Losing Network Traffic Data'<br>
-[6] https://www.computerworld.com/article/2521502/tcp-reset--pros-and-cons.html, 'TCP RESET: Pros and Cons'
-[7] https://cybersecurity-magazine.com/a-brief-history-of-siem/, 'A Brief History of SIEM'
+[6] https://www.computerworld.com/article/2521502/tcp-reset--pros-and-cons.html, 'TCP RESET: Pros and Cons'<br>
+[7] https://cybersecurity-magazine.com/a-brief-history-of-siem/, 'A Brief History of SIEM'<br>
+[8] https://www.stratospherenetworks.com/blog/what-is-xdr-your-guide-to-extended-detection-and-response/, 'What Is XDR? Your Guide to Extended Detection and Response'<br>
+[9] https://www.elastic.co/blog/whats-new-elastic-security-7-16-0 'Elastic Security 7.16: Accelerate SecOps with the most powerful Elastic Security yet'<br>
